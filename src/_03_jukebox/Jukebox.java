@@ -26,6 +26,7 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /*   If you don't have javazoom.jar in your project, you can download it from here: http://bit.ly/javazoom
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
+@SuppressWarnings("unused")
 public class Jukebox implements Runnable, MouseListener {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
