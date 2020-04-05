@@ -88,9 +88,11 @@ public class Jukebox implements Runnable, MouseListener {
 		JLabel hyyhpt1 = (JLabel) e.getSource();
 		
 		if (mapofsoul7 == displayCover1) {
+			song2.stop();
 			song1.play();
 		}
 		else if (hyyhpt1 == displayCover2) {
+			song1.stop();
 			song2.play();
 		}
 	}
