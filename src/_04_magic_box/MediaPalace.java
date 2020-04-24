@@ -20,6 +20,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JApplet;
 import javax.swing.JLabel;
 
+@SuppressWarnings("deprecation")
 public class MediaPalace {
 
 	public JLabel loadImageFromTheInternet(String imageURL) throws MalformedURLException {
@@ -79,6 +80,7 @@ public class MediaPalace {
 	}
 
 	/* If you want to use an mp3, you must first convert it to a .wav file on http://media.io */
+	@SuppressWarnings("deprecation")
 	public AudioClip loadSound(String fileName) {
 		return JApplet.newAudioClip(getClass().getResource(fileName));
 	}

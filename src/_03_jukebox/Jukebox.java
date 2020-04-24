@@ -40,8 +40,8 @@ public class Jukebox implements Runnable, MouseListener {
 
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
-    	song1 = new Song("BTS (방탄소년단) 'ON' Kinetic Manifesto Film Come Prima.mp3");
-    	song2 = new Song("[MV] BTS(방탄소년단) DOPE(쩔어).mp3");
+    	song1 = new Song("BTS 'ON' Kinetic Manifesto Film Come Prima.mp3");
+    	song2 = new Song("[MV] BTS DOPE.mp3");
 
 		// 3. Play the Song
 

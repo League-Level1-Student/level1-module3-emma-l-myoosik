@@ -4,8 +4,8 @@ package _04_magic_box;
  *    Level 1
  */
 
-
 import java.awt.Dimension;
+// import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -18,6 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+@SuppressWarnings({ "serial", "unused" })
 public class MagicBox extends JPanel implements Runnable, MouseListener {
 
 	/*
@@ -55,7 +56,7 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
-		frame.addMouseListener(null);
+		addMouseListener(this);
 	}
 
 	private void loadBackgroundImage() throws Exception {
@@ -75,7 +76,23 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		int x = e.getX();
+		int y = e.getY();
+		System.out.println(x + " " + y);
+		
 		MediaPalace mediaPalace = new MediaPalace();
+		if (x > 260 && x < 310 && y > 242 && y < 292) {
+			//src/_04_magic_box/magicalSound.wav
+			mediaPalace.playMusicOnComputer("src/_04_magic_box/Magical-harp-transition-music.mp3");
+		}
+		
+		if (x > 190 && x < 203 && y > 507 && y < 518) {
+			mediaPalace.playMusicOnComputer("src/_04_magic_box/Drum-roll-suspense-award.mp3");
+		}
+		
+		if (x > 330 && x < 350 && y > 615 && y < 630) {
+			mediaPalace.loadImageFromWithinProject("magic-box.jpg");
+		}
 		
 		
 	}
